@@ -51,16 +51,16 @@ main > section {
 
 /* Preload Start */
 .loding {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   min-height: 100vh !important;
-  z-index: 99;
+  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #3c6382;
+  background-color: #23263ad1;
 }
 
 .circle {
@@ -75,7 +75,7 @@ main > section {
   content: "";
   width: 20px;
   height: 10px;
-  background: #3c6382;
+  background-color: #23263ad1;
   position: absolute;
   top: -5px;
   left: 50%;
