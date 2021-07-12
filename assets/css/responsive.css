@@ -1,0 +1,38 @@
+@media (max-width: 1024px) {
+  .responsive-buttons {
+    display: block;
+  }
+  .open {
+    display: block !important;
+  }
+  ul.navber-nav {
+    position: fixed;
+    top: 64px;
+    right: 0;
+    width: 60%;
+    background: #1f2235a8;
+    flex-direction: column;
+    height: 100%;
+    padding: 1rem;
+    transform: scale(0);
+    transform: translateX(460px);
+    opacity: 0;
+    visibility: hidden;
+    transform-origin: right;
+    transition: all 0.3s ease;
+    z-index: 999;
+  }
+}
+
+@media (max-width: 425px) {
+  .none {
+    display: none !important;
+  }
+
+  .col-x-sm-6 {
+    width: 50%;
+  }
+  ul.navber-nav {
+    width: 80% !important;
+  }
+}
