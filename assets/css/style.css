@@ -26,6 +26,7 @@
 body {
   font-family: var(--default-font);
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar {
@@ -51,42 +52,39 @@ main > section {
 
 /* Preload Start */
 .loding {
+  z-index: 9999;
+  min-height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  min-height: 100vh !important;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #23263ad1;
+  background-color: #23263ab0;
+  width: 100vw;
+  display: grid;
+  place-items: center;
 }
-
 .circle {
-  width: 30px;
-  height: 30px;
-  border: 2px solid #fff;
+  border: 5px solid var(--praimary);
   border-radius: 50%;
-  position: relative;
-  animation: rotate 1s ease infinite;
-}
-.circle::before {
-  content: "";
-  width: 20px;
-  height: 10px;
-  background-color: #23263ad1;
-  position: absolute;
-  top: -5px;
-  left: 50%;
-  transform: translateX(-50%);
+  border-top: 5px solid var(--secendary-alt);
+  width: 40px;
+  height: 40px;
+  -webkit-animation: spin 0.9s linear infinite; /* Safari */
+  animation: spin 0.9s linear infinite;
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(0);
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
   }
-  to {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
     transform: rotate(360deg);
   }
 }
