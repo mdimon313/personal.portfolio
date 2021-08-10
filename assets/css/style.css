@@ -103,6 +103,7 @@ main > section {
   width: 100%;
   z-index: 999;
   padding: 0.5rem 0 !important;
+  transition: all 0.4s ease-out;
 }
 
 .fixed .logo h2 {
@@ -447,7 +448,9 @@ ul li a:hover,
   position: absolute;
   bottom: 0;
   left: 0;
-  background: linear-gradient(to bottom, #fc727b3d, #dc3545bd, #ff2333);
+  /* background: linear-gradient(to bottom, #fc727b3d, #dc3545bd, #ff2333); */
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
   transform: scaleY(0);
   transform-origin: bottom;
 }
