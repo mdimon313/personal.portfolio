@@ -109,22 +109,22 @@ window.addEventListener("load", () => {
   AOS.init();
 
   // Glide js
-  new Glide(document.querySelector("#glide"), {
-    type: "carousel",
-    perView: 4,
-    focusAt: "center",
-    breakpoints: {
-      800: {
-        perView: 2,
-      },
-      480: {
-        perView: 1,
-      },
-    },
-  });
+  // new Glide(document.querySelector("#glide"), {
+  //   type: "carousel",
+  //   perView: 4,
+  //   focusAt: "center",
+  //   breakpoints: {
+  //     800: {
+  //       perView: 2,
+  //     },
+  //     480: {
+  //       perView: 1,
+  //     },
+  //   },
+  // });
 
   // blog slider
-  $("#blogContent").slick({
+  $("#blogSlider").slick({
     centerMode: true,
     centerPadding: "60px",
     arrows: false,
