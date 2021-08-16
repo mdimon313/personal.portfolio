@@ -64,18 +64,18 @@ window.addEventListener("load", () => {
     },
   });
 
-  $(".bannerTitle").textillate({
-    loop: false,
-    minDisplayTime: 4,
-    initialDelay: 1,
-    autoStart: true,
-    in: {
-      effect: "fadeInDown",
-      delayScale: 2,
-      delay: 15,
-      sequence: true,
-    },
-  });
+  // $(".bannerTitle").textillate({
+  //   loop: false,
+  //   minDisplayTime: 4,
+  //   initialDelay: 1,
+  //   autoStart: true,
+  //   in: {
+  //     effect: "fadeInDown",
+  //     delayScale: 2,
+  //     delay: 15,
+  //     sequence: true,
+  //   },
+  // });
 
   //   slick slider
 
@@ -104,6 +104,23 @@ window.addEventListener("load", () => {
         },
       },
     ],
+  });
+
+  AOS.init();
+
+  // Glide js
+  new Glide(document.querySelector("#glide"), {
+    type: "carousel",
+    perView: 4,
+    focusAt: "center",
+    breakpoints: {
+      800: {
+        perView: 2,
+      },
+      480: {
+        perView: 1,
+      },
+    },
   });
 });
 // Preload End
