@@ -124,7 +124,7 @@ window.addEventListener("load", () => {
   });
 
   // blog slider
-  $("#center").slick({
+  $("#blogContent").slick({
     centerMode: true,
     centerPadding: "60px",
     arrows: false,
