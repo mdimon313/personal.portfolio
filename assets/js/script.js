@@ -121,4 +121,24 @@ window.addEventListener("load", () => {
       },
     ],
   });
+  // Blog Slider End
+
+  // Contact
+  const form = document.querySelector("#form");
+  const validateForm = (e) => {
+    e.preventDefault();
+    let name, email, message;
+    name = document.querySelector("#name").value;
+    email = document.querySelector("#email").value;
+    message = document.querySelector("#msg").value;
+    if (name !== "" && email !== "" && message !== "") {
+      alert("successfull");
+      console.log(`Name: ${name} \n Email: ${email} \n Message: ${message}`);
+    } else {
+      alert("Please Try again !");
+    }
+    form.reset();
+  };
+
+  form.addEventListener("submit", validateForm, true);
 });

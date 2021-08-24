@@ -7,6 +7,7 @@
 }
 
 :root {
+  --primary-white: #fff;
   --praimary: #1f2235;
   --praimary-alt: #23263a;
   --secendary: #50ee66;
@@ -46,8 +47,8 @@ a {
   text-decoration: none;
 }
 main > section {
-  padding: 96px 0;
-  margin: -3px 0;
+  padding: 80px 0;
+  /* margin: -3px 0; */
 }
 
 /* Preload Start */
@@ -283,7 +284,6 @@ ul li a:hover,
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 2px -4px 7px #dc3545;
 }
 
 .sec-title h2 span {
@@ -449,14 +449,17 @@ ul li a:hover,
   bottom: 0;
   left: 0;
   /* background: linear-gradient(to bottom, #fc727b3d, #dc3545bd, #ff2333); */
-  background-color: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(10px);
+  background-color: var(--praimary);
   transform: scaleY(0);
   transform-origin: bottom;
+  color: var(--primary-white) !important;
 }
 
 .card:hover .card-body {
   transform: scaleY(1);
+}
+.card-body h4 {
+  font-weight: 600;
 }
 /* Portfoilo End */
 
@@ -469,6 +472,76 @@ ul li a:hover,
 /* Contact Start */
 .contact {
   background-color: var(--praimary-alt);
+}
+form > div > .form-control {
+  background-color: transparent;
+  color: var(--primary-white) !important;
+  font-size: 0.93rem;
+  font-family: var(--default-font);
+  padding: 0.75rem 1rem;
+  outline: none;
+  border: 1px solid var(--title-text);
+  transition: all 0.3s ease-in;
+  font-weight: var(--w-light);
+  font-family: var(--custom-font);
+}
+form > div > .form-control::selection {
+  background-color: var(--secendary-alt);
+  color: var(--primary-white);
+}
+.form-control:focus {
+  background-color: transparent;
+  outline: none;
+  box-shadow: none;
+  border: 1px solid var(--secendary-alt);
+}
+.form-control::placeholder {
+  font-size: 1rem;
+}
+form .textarea {
+  height: 12rem;
+  overflow-y: auto;
+  word-wrap: wrap;
+  resize: none;
+}
+
+form .textarea::-webkit-scrollbar {
+  width: 0px;
+}
+.btn-success {
+  background-color: var(--praimary);
+  color: var(--primary-white);
+  font-weight: var(--w-regular);
+  font-size: 1rem;
+  border: 1px solid var(--secendary-alt);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.btn-success:hover {
+  background-color: var(--secendary-alt);
+  border: 1px solid var(--secendary-alt);
+}
+.btn-success:focus {
+  box-shadow: none;
+  background-color: var(--secendary-alt);
+  border: 1px solid var(--secendary-alt);
+}
+address* {
+  display: flex;
+  flex-wrap: wrap;
+}
+.address i,
+.address a,
+.address span {
+  color: var(--title-text) !important;
+}
+.address span::selection {
+  background-color: var(--secendary-alt);
+  color: var(--primary-white);
+}
+.address a:hover {
+  color: var(--secendary-alt) !important;
+  transition: all 0.3s ease-in-out;
 }
 /* Contact End */
 
