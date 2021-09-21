@@ -22,11 +22,21 @@
     transition: all 0.3s ease;
     z-index: 999;
   }
+  section {
+    margin: -2px 0;
+  }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 480px) {
   .none {
     display: none !important;
+  }
+  section {
+    margin: -2px 0;
+  }
+
+  br {
+    display: none;
   }
 
   .mb-xs-3 {
@@ -36,7 +46,43 @@
   .col-x-sm-6 {
     width: 50%;
   }
+
   ul.navber-nav {
     width: 80% !important;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  /* banner component*/
+  .banner-desc h1 {
+    font-size: 1.8rem !important;
+  }
+  .banner-desc p,
+  .sec-title p,
+  p.copy_right,
+  .card-body p {
+    font-size: 14px !important;
+  }
+
+  /* section title */
+  .sec-title h2 {
+    font-size: 2rem !important;
+  }
+
+  /* service component */
+
+  /* services card */
+  .card .card-disc p {
+    font-size: 13px !important;
+  }
+
+  /* portfolio component */
+  /* .card-body p {
+    font-size: 14px;
+  } */
+
+  /* contact us */
+  .btn-success {
+    font-size: 15px !important;
   }
 }

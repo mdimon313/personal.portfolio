@@ -124,6 +124,7 @@ window.addEventListener("load", () => {
   // Blog Slider End
 
   // Contact
+
   const form = document.querySelector("#form");
   const validateForm = (e) => {
     e.preventDefault();
@@ -139,6 +140,30 @@ window.addEventListener("load", () => {
     }
     form.reset();
   };
+
+  const name = document.querySelector("#name");
+  const email = document.querySelector("#email");
+  const msg = document.querySelector("#msg");
+
+  const inputValid = (e) => {
+    const inputType = e.target.type;
+    console.log(inputType);
+    if (inputType === "text") {
+      name.classList.add("border-success");
+      //
+    } else {
+      name.classList.remove("border-success");
+    }
+
+    if (inputType === "email") {
+      email.classList.add("border-success");
+    } else {
+      email.classList.remove("border-success");
+    }
+  };
+  name.addEventListener("input", inputValid);
+  email.addEventListener("input", inputValid);
+  msg.addEventListener("input", inputValid);
 
   form.addEventListener("submit", validateForm, true);
 });
