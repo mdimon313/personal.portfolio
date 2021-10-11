@@ -109,6 +109,9 @@ main > section {
   background-color: var(--praimary);
   padding: 1rem 0;
   transition: all 0.4s ease-out;
+  position: sticky;
+  top: 0;
+  width: 100%;
 }
 
 .fixed {
@@ -411,7 +414,7 @@ ul li a:hover,
   height: 7px;
 }
 .range .ui-rang1 {
-  width: 75%;
+  width: 50%;
   background-color: var(--secendary-dark-alt);
   border-radius: 4px;
 }
@@ -422,18 +425,18 @@ ul li a:hover,
   border-bottom-right-radius: 4px;
 }
 .range .web-dev-rang1 {
-  width: 90%;
+  width: 85%;
   background-color: var(--secendary-dark-alt);
   border-radius: 4px;
 }
 .range .web-dev-rang2 {
   background: #d8d8d8;
-  width: 10%;
+  width: 15%;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
 }
 .range .marketing-rang1 {
-  width: 65%;
+  width: 70%;
   background-color: var(--secendary-dark-alt);
   border-radius: 4px;
 }
@@ -582,4 +585,38 @@ address* {
   transform: scale(0.7);
   font-weight: var(--w-light);
 }
+
+.scroll_to_top {
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+
+  transform: translateX(70px);
+  transition: all 0.3s ease-in-out;
+
+  visibility: hidden;
+  opacity: 0;
+
+  width: 30px;
+  height: 30px;
+
+  background-color: var(--secendary-alt);
+  color: var(--primary-white);
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.scroll_to_top a {
+  color: var(--primary-white);
+}
+
+.scroll_to_top i {
+  font-size: 1.5rem;
+  display: block;
+}
+
 /* Footer End */
