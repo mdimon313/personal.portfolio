@@ -47,7 +47,9 @@
           class="header-wrap d-flex align-items-center justify-content-between"
         >
           <div class="logo">
-            <h2 class="text-white m-0">Im<span class="dot"></span>on</h2>
+            <h2 class="text-white m-0">
+              <a href="#" class="text-white">Im<span class="dot"></span>on</a>
+            </h2>
           </div>
           <nav>
             <ul class="navber-nav m-0 d-flex align-items-center">
@@ -905,7 +907,6 @@
                 </div>
                 <div class="msg mb-3">
                   <textarea
-                    type="text"
                     class="form-control textarea"
                     placeholder="Type your message"
                     id="msg"
@@ -923,11 +924,9 @@
                 <div class="col-12">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5298117.488960265!2d88.79931663871034!3d23.51342968608355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30adaaed80e18ba7%3A0xf2d28e0c4e1fc6b!2sBangladesh!5e0!3m2!1sen!2sbd!4v1629192267268!5m2!1sen!2sbd"
-                    style="width: 100%"
+                    style="width: 100%; border: 0"
                     class="rounded-1"
                     height="180"
-                    style="border: 0"
-                    allowfullscreen=""
                     loading="lazy"
                   ></iframe>
                 </div>
@@ -999,7 +998,7 @@
           </div>
         </div>
         <div class="scroll_to_top">
-          <span id="top_icon text-white"
+          <span class="text-white" id="top_icon"
             ><a href="index.html"><i class="fal fa-angle-up"></i></a
           ></span>
         </div>
@@ -1015,7 +1014,7 @@
     <!-- textillate js -->
     <script src="./assets/js/plugin/jquery.textillate.js"></script>
     <!-- Aos js -->
-    <script type="text/javascript" src="./assets/js/plugin/aos.js"></script>
+    <script src="./assets/js/plugin/aos.js"></script>
     <!-- bootstrap js -->
     <script src="./assets/js/plugin/bootstrap.min.js"></script>
     <!-- custom js -->
